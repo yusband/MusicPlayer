@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@mipmap/background_grey"
+    tools:context="dong.musicplayer.MusicActivity">
+
+    <LinearLayout
+        android:id="@+id/handle_btnlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_marginLeft="70dp"
+            android:id="@+id/previous_music"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:layout_alignParentLeft="true"
+            android:background="@mipmap/previous_song" />
+
+        <!--<Button-->
+            <!--android:id="@+id/repeat_music"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="70dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_toRightOf="@id/previous_music"-->
+            <!--android:background="@mipmap/repeat_song" />-->
+
+        <Button
+            android:id="@+id/play_music"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:layout_toRightOf="@id/previous_music"
+            android:background="@mipmap/play" />
+        <Button
+            android:id="@+id/pause_music"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:layout_toRightOf="@id/previous_music"
+            android:background="@mipmap/pause" />
+
+
+        <!--<Button-->
+            <!--android:id="@+id/shuffle_music"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="70dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_toRightOf="@id/play_music"-->
+            <!--android:background="@mipmap/shuffle_play" />-->
+
+        <Button
+            android:layout_marginRight="70dp"
+            android:id="@+id/next_music"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/next_song" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/music_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/handle_btnlayout"
+        android:dividerHeight="@null"
+
+        android:layout_marginBottom="50dp" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/singleSong_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <ImageView
+            android:id="@+id/music_album"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/player_icon_black"
+             />
+
+
+        <RelativeLayout
+            android:id="@+id/music_about_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/music_album"
+            android:layout_toRightOf="@id/music_album" >
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5.0dp"
+                android:layout_marginLeft="5.0dp"
+                android:text="singer"/>
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text1"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5.0dp"
+                android:layout_marginTop="8.0dp"
+                android:text="time"/>"
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/list" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
